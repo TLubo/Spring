@@ -1,0 +1,17 @@
+.row {
+	margin-top: 3%;
+}
+.btn-lg {
+	margin-left: 90%;
+}
+.h3 {
+	font family: "Times New Roman", Times, serif;
+}
+a:hover {
+    color: black;
+	text-decoration: none;
+}
+a {
+	color: black;
+}
+ 

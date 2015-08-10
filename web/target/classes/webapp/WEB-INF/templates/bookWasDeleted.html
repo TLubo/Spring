@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head lang="en">
+
+    <meta charset="UTF-8"/>
+    <title>Usunięta książka</title>
+	<link rel="stylesheet" th:href="@{/static/bootstrap.min.css}" href="static/bootstrap.min.css" />
+	
+	<link rel="stylesheet" th:href="@{/static/application.css}" href="/static/application.css" />
+	
+</head>
+
+<body>
+	
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		<div class="jumbotron">
+			<h3>Książka o tytule <a th:text="${book}">title</a> została usunięta</h3>
+			<form method="get">
+				<button type="submit" class="btn btn-primary btn-lg" name="Powrot" th:formaction="@{/info_books/}"> Powrót </button>
+			</form>			
+		</div>
+		</div>
+	</div>
+</div>	
+	
+</body>
+</html>
