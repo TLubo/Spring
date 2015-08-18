@@ -28,7 +28,8 @@ public class BookRepositoryImpl implements MyCustomBookRepository {
 			restriction.and(bookEntity.title.startsWithIgnoreCase(bookSearchCriteria.getTitle()));
 		}
 		if (bookSearchCriteria.getAuthor() != null) {
-			restriction.and(bookEntity.authors.any().firstName.startsWithIgnoreCase(bookSearchCriteria.getAuthor()).or(bookEntity.authors.any().lastName.startsWithIgnoreCase(bookSearchCriteria.getAuthor())));
+			restriction.and(bookEntity.authors.any().firstName.startsWithIgnoreCase(bookSearchCriteria.getAuthor())
+					.or(bookEntity.authors.any().lastName.startsWithIgnoreCase(bookSearchCriteria.getAuthor())));
 		}
 		if (bookSearchCriteria.getLibraryName() != null) {
 			restriction.and(bookEntity.library.name.startsWithIgnoreCase(bookSearchCriteria.getLibraryName()));
