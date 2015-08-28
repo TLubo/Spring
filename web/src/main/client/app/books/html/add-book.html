@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<body ng-app="app.books" ng-controller="BookSaveController">
+		<section>
+			
+			<div flash-message="5000"></div>
+			<p>Tytuł książki</p>
+			<input  ng-required="true" type="text" ng-model="title">
+			<button class="btn btn-success" ng-click="addAuthor()">Nowy autor</button>
+			<button class="btn btn-primary" ng-click="save()">Zapisz</button>
+			<p></p>
+			<p>Autorzy:</p>
+			<table class="table table-hover">
+				<tr>
+					<th>Imię</th>
+					<th>Nazwisko</th>
+					<th>Usuń</th>
+				</tr>
+				<tr ng-repeat="author in authors">
+					<td>{{ author.firstName }}</td>
+					<td>{{ author.lastName }}</td>
+					<td>
+						<button class="btn btn-danger" ng-click="removeAuthor(author.id)">Usuń</button>
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</html>

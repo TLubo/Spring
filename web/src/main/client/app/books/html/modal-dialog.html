@@ -1,0 +1,25 @@
+<div>
+    <form novalidate>
+        <div class="modal-header">
+            <h3 class="modal-title">Nowy autor</h3>
+        </div>
+             
+        <body ng-app="app.books" ng-controller="BookModalController">
+        	<form novalidate name="sample">
+        		<div class="modal-body">
+				    <p ng-show="sample.$invalid && sample.$submitted">Uzupełnij brakujące pola</p>
+				    <p>Imię autora</p>
+				    <input ng-required="true" name="text" type="text" ng-model="firstName">
+				    <p>Nazwisko autora</p>
+				    <input ng-required="true" name="text" type="text" ng-model="lastName">
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary" ng-click="accept()">Dodaj</button>
+					<button class="btn btn-warning" ng-click="$dismiss()">Anuluj</button>
+					</td>
+				</div>
+			</form>
+		</body>		
+		
+    </form>
+</div> 

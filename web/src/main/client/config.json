@@ -1,0 +1,19 @@
+{
+    "paths": {
+        "tmp": ".tmp",
+        "dist": "dist",
+        "app": "app",
+        "test": "test"
+    },
+    "modules": [
+        "main",
+        "books",
+        "authors",
+        "myCustomFilters",
+        "component-1",
+        "component-2"
+    ],
+    "appBuild": true,
+    "proxy": "http://localhost:9721",
+    "proxyContext": "/workshop"
+}
